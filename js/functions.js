@@ -1,5 +1,5 @@
 window.onload = function(){
-    console.log('sem erro')
+    dark = false
 
     bdy = document.querySelector('#body')
     a = document.querySelector('#screen-button')
@@ -12,14 +12,24 @@ window.onload = function(){
     a.addEventListener('click',clicar)
 
     function clicar (){
-    bdy.className = 'body2'
-    a.className = 'screen-button2'
-    b.className = 'circle2'
-    group.style.background = 'none'
-    group2.style.background = 'none'
-    getapp.style.color = "#ccc"
-    logo.className = 'instagram-logo2'
+        if (dark){
+        bdy.className = 'body'
+        a.className = 'screen-button'
+        b.className = 'circle'
+        logo.className = 'instagram-logo'
+    }else{
+        bdy.className = 'body2'
+        a.className = 'screen-button2'
+        b.className = 'circle2'
+        group.style.background = 'none'
+        group2.style.background = 'none'
+        getapp.style.color = "#ccc"
+        logo.className = 'instagram-logo2'
     }
+    dark = !dark
+  }
+
+
 }
 
 
